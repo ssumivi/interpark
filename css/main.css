@@ -38,25 +38,64 @@ body {
   margin: 0 auto;
 }
 /* section */
-.wrap > section{
+.wrap > section {
   padding: 30px 0 90px 0;
 }
-.section-top{
+.section-top {
   text-align: center;
 }
-.section-top > h2{
+.section-top > h2 {
   font-size: 28px;
   line-height: 33px;
   font-weight: 700;
   margin-bottom: 10px;
 }
-.section-top > p{
+.section-top > p {
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.5);
 }
+.section-top .btns {
+  margin: 25px 0;
+}
+.section-top .btns a {
+  display: inline-block;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #111;
+  background: #fff;
+  margin-right: 6px;
+}
+.btns-active {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+.section-bottom {
+  text-align: center;
+}
+.bt-link-shop {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 56px;
+  padding: 0 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 28px;
+  color: #333;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.bt-link-shop::after {
+  content: "";
+  background: url("../images/icon_linkArrow.svg") no-repeat center;
+  width: 17px;
+  height: 11px;
+  display: inline-block;
+}
 /* swiper button */
-.sw-bt{
+.sw-bt {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -66,14 +105,14 @@ body {
   font-size: 0;
   cursor: pointer;
 }
-.sw-next{
+.sw-next {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translate(50%, -50%);
   z-index: 99;
 }
-.sw-prev{
+.sw-prev {
   position: absolute;
   top: 50%;
   left: 0;
@@ -90,7 +129,7 @@ body {
   height: 16px;
   background: url("../images/slider_arrow.svg") no-repeat center;
 }
-.sw-prev::before{
+.sw-prev::before {
   transform: scaleX(-100%);
 }
 /* 상단 */
@@ -157,33 +196,33 @@ body {
   cursor: pointer;
 }
 /* 상단 오른쪽 */
-.header-right{
+.header-right {
   display: flex;
   align-items: center;
 }
-.member-list{
+.member-list {
   display: flex;
   gap: 20px;
   margin-top: 17px;
 }
-.member-list > li{
+.member-list > li {
   /* margin-right: 20px; */
 }
-.member-list > li > a{
+.member-list > li > a {
   font-size: 15px;
   color: #111;
   font-weight: 500;
 }
-.mb-mypage{
+.mb-mypage {
   display: none;
 }
-.mypage-bt{
+.mypage-bt {
   position: relative;
 }
-.mypage-bt:hover .mypage{
+.mypage-bt:hover .mypage {
   display: block;
 }
-.mypage{
+.mypage {
   display: none;
   width: 125px;
   position: absolute;
@@ -194,10 +233,10 @@ body {
   border-radius: 13px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
 }
-.mypage-list li a{
+.mypage-list li a {
   line-height: 1.2;
 }
-.icon-arrow{
+.icon-arrow {
   display: inline-block;
   width: 8px;
   height: 5px;
@@ -206,34 +245,34 @@ body {
   margin-left: 5px;
 }
 /* 상단 아랫부분 */
-.header-down{
+.header-down {
   display: flex;
   align-items: center;
   height: 60px;
   gap: 11px;
 }
-.service-list{
+.service-list {
   display: flex;
   gap: 23px;
 }
-.service-list li a{
+.service-list li a {
   font-size: 16px;
   color: #333;
   font-weight: 600;
   line-height: 30px;
 }
-.service-list li a img{
+.service-list li a img {
   width: 30px;
   height: 30px;
   margin-right: 5px;
 }
-.service-menu li a{
+.service-menu li a {
   font-size: 16px;
   color: #333;
   font-weight: 600;
   padding: 0 12px;
 }
-.service-menu li a::before{
+.service-menu li a::before {
   content: "";
   width: 1.5px;
   height: 16px;
@@ -242,24 +281,78 @@ body {
   position: absolute;
 }
 /* 추천 이벤트 */
-.promotion .inner{
+.promotion .inner {
   height: 345px;
 }
-.promotion .section-top{
+.promotion .section-top {
   margin-bottom: 20px;
 }
-.promotion .section-top{
+.promotion .section-top {
   display: none;
 }
-.promotion-slide{
+.promotion-slide {
   height: 100%;
 }
-.sw-promotion a{
+.sw-promotion a {
   display: block;
   border-radius: 13px;
   overflow: hidden;
 }
-.sw-promotion a img{
+.sw-promotion a img {
   width: 100%;
   height: auto;
+}
+/* 쇼핑 추천 */
+.sw-shopping {
+  height: 100%;
+}
+.good {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #eeeeee;
+  text-align: center;
+  overflow: hidden;
+}
+.good img {
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+.good-info {
+  background-color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+.good-info-list li b {
+  font-size: 20px;
+  line-height: 24px;
+  color: #111;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.good-info-list li b span {
+  color: #ef3e43;
+}
+.good-info-list li p {
+  /* 3. display: -webkit-box */
+  display: -webkit-box;
+  font-size: 15px;
+  line-height: 18px;
+  color: #111;
+  margin-top: 10px;
+  /* 내용이 1줄일 수도 있고 최대 2줄이다 */
+  /* 높이값을 지정해서 레이아웃을 지킨다. */
+  /* 내용이 넘치는 경우 ... 처리 */
+  /* 카페에 적어둘께요. 2줄 말줄임 */
+  /* 1. 높이가 있어야 합니다. */
+  height: 37px;
+  /* 2. 넘치는 영역을 가린다. */
+  overflow: hidden;
+  /* 4. text-overflow: elipsis */
+  text-overflow: ellipsis;
+  /* 5. 아래 코드를 입력한다. */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
