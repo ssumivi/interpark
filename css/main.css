@@ -132,6 +132,27 @@ body {
 .sw-prev::before {
   transform: scaleX(-100%);
 }
+.section-slide {
+  position: relative;
+  margin-bottom: 20px;
+}
+/* 퀵메뉴 */
+.quick-menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 99;
+  padding: 0px 20px 20px;
+}
+.quick-menu .inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 /* 상단 */
 .header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -303,9 +324,17 @@ body {
   width: 100%;
   height: auto;
 }
+.sw-promotion-control {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+.sw-promotion-pg {
+  display: inline-block;
+}
 /* 쇼핑 추천 */
 .sw-shopping {
-  height: 100%;
+  height: 410px;
 }
 .good {
   display: block;
@@ -431,6 +460,9 @@ body {
   color: #111;
 }
 /* 티켓 랭킹 */
+.ticket .section-slide .sw-bt{
+  top: 35%;
+}
 .sw-ticket {
   height: 100%;
 }
@@ -526,16 +558,16 @@ body {
   border-radius: 3px;
 }
 /* 인터파크 라이브 */
-.live .section-top{
+.live .section-top {
   margin-bottom: 25px;
 }
-.section-slide{
+.section-slide {
   height: 455px;
 }
-.sw-live{
+.sw-live {
   height: 100%;
 }
-.live-link{
+.live-link {
   display: block;
   position: relative;
   width: 100%;
@@ -543,20 +575,20 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.live-img{
+.live-img {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.live-img img{
+.live-img img {
   /* width: 100%; */
   height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
-.live-info{
+.live-info {
   position: absolute;
   top: 0;
   left: 0;
@@ -565,7 +597,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
-.live-info-cate{
+.live-info-cate {
   display: inline-block;
   font-size: 13px;
   line-height: 32px;
@@ -575,7 +607,7 @@ body {
   border-radius: 16px;
   margin-bottom: 20px;
 }
-.live-info-title{
+.live-info-title {
   display: -webkit-box;
   font-size: 20px;
   line-height: 24px;
@@ -588,27 +620,27 @@ body {
   font-weight: 700;
   color: #fff;
 }
-.live-info-main{
+.live-info-main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
 }
-.live-info-date{
+.live-info-date {
   color: #fff;
   font-size: 28px;
   line-height: 33px;
   margin-bottom: 5px;
 }
-.live-info-time{
+.live-info-time {
   color: #fff;
   font-size: 50px;
   line-height: 60px;
   font-weight: 700;
 }
-.live-info-bottom{
+.live-info-bottom {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -616,15 +648,15 @@ body {
   left: 0;
   width: 100%;
   padding: 0 20px;
-}  
-.live-info-thumb{
+}
+.live-info-thumb {
   position: relative;
   width: 65px;
   height: 65px;
   border-radius: 3px;
   overflow: hidden;
 }
-.live-info-thumb img{
+.live-info-thumb img {
   /* width: 100%; */
   height: 100%;
   position: absolute;
@@ -632,10 +664,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.live-info-desc{
+.live-info-desc {
   width: calc(100% - 65px);
 }
-.live-info-desc-title{
+.live-info-desc-title {
   font-size: 15px;
   line-height: 18px;
   color: #fff;
@@ -664,32 +696,32 @@ body {
   font-weight: 700;
 }
 /* 오늘의 도서 */
-.sw-books{
+.sw-books {
   height: 100%;
 }
-.books-link{
+.books-link {
   display: block;
   width: 100%;
   height: 100%;
 }
-.books-img{
+.books-img {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 335px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.books-img img{
+.books-img img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   /* object-fit: contain; */
 }
-.books-info{
+.books-info {
   text-align: center;
 }
 .books-info-title {
@@ -710,16 +742,16 @@ body {
   font-style: normal;
 }
 /* 이벤트 */
-.event .section-top{
+.event .section-top {
   margin-bottom: 20px;
 }
-.event .section-slide{
+.event .section-slide {
   height: 350px;
 }
-.sw-events{
+.sw-events {
   height: 100%;
 }
-.events-link{
+.events-link {
   position: relative;
   display: block;
   width: 100%;
@@ -729,7 +761,7 @@ body {
   background: #f7f7f7;
   overflow: hidden;
 }
-.events-link img{
+.events-link img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -738,19 +770,19 @@ body {
   mix-blend-mode: multiply;
 }
 /* 하단 */
-.footer-menu{
-border-top: ;
-border-top: 1px solid #e5e5e5;
-border-bottom: 1px solid #e5e5e5;
+.footer-menu {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
 }
-.footer-menu-list{
+.footer-menu-list {
   display: flex;
   justify-content: space-between;
 }
-.footer-menu-list > li{
+.footer-menu-list > li {
   position: relative;
 }
-.footer-menu-list > li::after{
+.footer-menu-list > li::after {
   content: "";
   width: 1px;
   height: 12px;
@@ -759,29 +791,29 @@ border-bottom: 1px solid #e5e5e5;
   right: -36px;
   background: rgba(0, 0, 0, 0.3);
 }
-.footer-menu-list > li:last-child::after{
+.footer-menu-list > li:last-child::after {
   content: none;
 }
-.footer-menu-list > li > a{
+.footer-menu-list > li > a {
   font-size: 13px;
   line-height: 16px;
   color: #333;
   white-space: nowrap;
 }
-.footer-menu-list > li > a > strong{
+.footer-menu-list > li > a > strong {
   font-weight: 700;
 }
-.footer-menu-list > li > a > i::before{
+.footer-menu-list > li > a > i::before {
   display: inline-block;
   position: relative;
   content: "";
   width: 8px;
   height: 6px;
-  background: url("../images/icon_arrow.svg")no-repeat center;
+  background: url("../images/icon_arrow.svg") no-repeat center;
   margin-left: 4px;
   vertical-align: 2px;
 }
-.more-list{
+.more-list {
   display: none;
   position: absolute;
   top: 20px;
@@ -793,51 +825,52 @@ border-bottom: 1px solid #e5e5e5;
   z-index: 9999;
   width: 110px;
 }
-.footer-menu-list > li:hover .more-list{
+.footer-menu-list > li:hover .more-list {
   display: block;
 }
-.more-list li{
+.more-list li {
   margin-bottom: 14px;
 }
-.more-list li:last-child{
+.more-list li:last-child {
   margin-bottom: 0;
 }
-.more-list li a{
+.more-list li a {
   white-space: nowrap;
   font-size: 13px;
   color: #333;
 }
 /* 하단 메인 */
-.footer-main{
+.footer-main {
   padding-top: 30px;
   padding-bottom: 55px;
 }
-.footer-main .inner{
+.footer-main .inner {
   display: flex;
 }
-.footer-main-left ,.footer-main-right{
+.footer-main-left,
+.footer-main-right {
   display: flex;
 }
-.company-name{
+.company-name {
   font-size: 15px;
   font-weight: 700;
   color: #111;
   margin-right: 10px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
-.company-info{
+.company-info {
   width: 80%;
 }
-.company-info li{
+.company-info li {
   font-size: 12px;
   line-height: 17px;
   color: #666;
   margin-bottom: 15px;
 }
-.company-info li:last-child{
-margin-bottom: 0;
+.company-info li:last-child {
+  margin-bottom: 0;
 }
-.company-info li span.f-line::after{
+.company-info li span.f-line::after {
   display: inline-block;
   position: relative;
   content: "";
@@ -847,10 +880,10 @@ margin-bottom: 0;
   vertical-align: -1px;
   margin: 0 3px;
 }
-.company-info li a{
+.company-info li a {
   color: #666;
 }
-.company-info li a.line{
+.company-info li .line {
   color: #4a95ff;
   text-decoration: underline;
 }
@@ -862,4 +895,70 @@ margin-bottom: 0;
   font-size: 11px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.4);
+}
+.copy {
+  font-size: 11px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.2);
+}
+/* 하단 모바일 버전 */
+.footer-mobile {
+  display: none;
+}
+.footer-mobile .inner {
+  background-color: #fafafa;
+  padding: 30px 0;
+  text-align: center;
+}
+.footer-mobile-menu a,
+.footer-mobile-info a {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.footer-mobile-menu a strong,
+.footer-mobile-info a strong {
+  font-weight: 700;
+}
+.a-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: #afafaf;
+}
+.a-more::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -5px;
+  width: 10px;
+  height: 11px;
+  background: url("../images/footer_arrow.svg");
+}
+.footer-mobile-info .a-line::before {
+  right: -20px;
+}
+.footer-mobile-info a:first-child {
+  margin-right: 20px;
+}
+.footer-mobile-info {
+  margin: 25px 0;
+}
+.footer-mobile-desc {
+  position: relative;
+  display: block;
+  padding: 0 15%;
+  font-size: 10px;
+  line-height: 14px;
+  color: #b2b2b2;
+  /* 줄내림 할때 단어는 잘라서 내리지 말아라 */
+  word-break: keep-all;
+  margin-bottom: 85px;
 }
