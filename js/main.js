@@ -13,6 +13,10 @@ window.onload = function () {
       nextEl: ".promotion .sw-next",
       prevEl: ".promotion .sw-prev",
     },
+    pagination: {
+      el: ".sw-promotion-pg",
+      clickable: true,
+    },
     breakpoints: {
       760: {
         slidesPerView: 2,
@@ -22,16 +26,11 @@ window.onload = function () {
   //  shopping swiper
   var swiper = new Swiper(".sw-shopping", {
     slidesPerView: 5,
-    spaceBetween: 10,
-    loop: true,
     grid: {
-      rows: 3,
+      rows: 2,
       fill: "row",
     },
-    navigation: {
-      nextEl: ".shopping .section-slide .sw-next",
-      prevEl: ".shopping .section-slide .sw-prev",
-    },
+    spaceBetween: 10,
     breakpoints: {
       900: {
         spaceBetween: 32,
@@ -100,11 +99,6 @@ window.onload = function () {
   var swiper = new Swiper(".sw-ticket", {
     slidesPerView: "auto",
     spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: ".ticket .sw-next",
-      prevEl: ".ticket .sw-prev",
-    },
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -120,25 +114,42 @@ window.onload = function () {
   var swiper = new Swiper(".sw-live", {
     slidesPerView: 4,
     spaceBetween: 10,
-    // breakpoints: {
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 32,
-    //   },
-    //   1280: {
-    //     slidesPerView: 4,
-    //     spaceBetween: 27,
-    //   },
-    // },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 27,
+      },
+    },
   });
   //   books swiper
   var swiper = new Swiper(".sw-books", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    loop: true,
-    navigation: {
-      nextEl: ".books .sw-next",
-      prevEl: ".books .sw-prev",
+    slidesPerView: 3,
+    spaceBetween: 19,
+    grid:{
+      rows:3,
+      fill:"row"
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 1,
+        },
+      },
+      1280: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        spaceBetween: 27,
+        grid: {
+          rows: 1,
+        },
+      },
     },
   });
   //   events swiper
@@ -150,5 +161,38 @@ window.onload = function () {
         slidesPerView: 4,
       },
     },
+  });
+  // const topBtn = document.getElementById("gotop");
+  // topBtn.addEventListener("click", function (event) {
+  //   event.preventDefault();
+  //   // console.log(window.scrollY);
+  //   if (window.scrollY == 0) {
+  //     window.scrollTo({
+  //       top: 9999,
+  //       behavior: "smooth",
+  //     });
+  //   } else {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // });
+  const topBtn = document.getElementById("gotop");
+  topBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (window.scrollY == 0) {
+      // 현재 스크롤 위치가 0이면 페이지 맨 아래로 스크롤
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+    } else {
+      // 현재 스크롤 위치가 0이 아니면 페이지 맨 위로 스크롤
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   });
 };
